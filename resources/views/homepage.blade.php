@@ -1,11 +1,4 @@
-@extends('layouts.app')
-
-@section('content')
-
-  <!-- MAIN -->
-
-  <main>
-
+<x-layout>
     <!-- Titolo e sottotilo -->
     <div class="container py-2">
       <div class="row my-4">
@@ -144,7 +137,4 @@
         </div>
       </div>
     </div>
-
-  </main>
-  
-  @endsection
+</x-layout>

@@ -1,11 +1,4 @@
-@extends('layouts.app')
-
-@section('content')
-
-  <!-- MAIN -->
-
-  <main>
-  
+<x-layout>
   <div class="container-fluid text-white my-5 py-5">
     <div class="row">
       <!-- Filtri ricerca -->
@@ -114,7 +107,4 @@
 
     </div>
   </div>
-  
-  </main>
-  
-  @endsection
+</x-layout>
