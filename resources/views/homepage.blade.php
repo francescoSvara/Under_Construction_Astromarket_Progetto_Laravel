@@ -3,18 +3,18 @@
     <div class="container py-2">
       <div class="row my-4">
         <div class="col-12 col-lg-6">
-          <img src="./media/A letter tech logo.gif" height="400" alt="">
+          <img src="/media/A letter tech logo.gif" height="400" alt="">
           <h3 class="text-white font-title titoloDue ms-4">SCOPRI IL FUTURO DELLO SHOPPING ONLINE</h3>
-          <button class="btn-log tx-a font-text slide-fwd-center">
-            <span class="box">
-              Accedi
-            </span>
-          </button>
-          <button class="btn-log tx-a font-text">
-            <span class="box">
-              Registrati
-            </span>
-          </button>
+          @auth
+          <div class="d-flex">
+            <form id="form-logout" method="POST" action="{{route('logout')}}" class="d-none">@Csrf</form>
+            <button id="btn-login" class="btn-log tx-a font-text" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();"><span class="box">Logout</span></button>
+            <p class="tx-a font-text mt-3"><span class="box">{{Auth::user()->name}}</span></p>
+          </div>
+          @else
+          <a id="btn-login" class="btn-log tx-a font-text" href="{{route('login')}}"><span class="box">Accedi</span></a>
+          <a id="btn-login" class="btn-log tx-a font-text" href="{{route('register')}}"><span class="box">Registrati</span></a>
+          @endauth
         </div>
         <div class="col-12 col-lg-6 d-flex">
           <div class="mx-auto img_gif"></div>
@@ -23,7 +23,6 @@
     </div>
     
     <!--Sezione cerca-->
-
     <div class="container font-text text-white pb-5 my-5">
       <div class="row">
         <div class="col-12 col-lg-3">

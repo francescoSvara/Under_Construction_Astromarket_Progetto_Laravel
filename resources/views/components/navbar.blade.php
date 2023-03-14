@@ -1,6 +1,6 @@
 <nav class="navbar font-text navbar-expand-md navbar-dark py-0" aria-label="Fourth navbar example">
     <div class="container-fluid">
-        <a href="./index.html"><img src="./media/LOGO.png" width="100" alt=""></a>
+        <a href="{{route('homepage')}}"><img src="./media/LOGO.png" width="100" alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
@@ -10,7 +10,7 @@
                 <a class="nav-link btn-nav fs-bold bg-mix" href="#"><span>Servizi</span></a>
             </li>
             <li class="nav-item mx-3">
-                <a class="nav-link btn-nav fs-bold bg-mix" href="#">Contatti</a>
+                <a class="nav-link btn-nav fs-bold bg-mix" href="{{route('contact')}}">Contatti</a>
             </li>
             <li class="nav-item mx-3">
                 <a class="nav-link btn-nav fs-bold bg-mix" href="#">Aiuto</a>
@@ -27,7 +27,7 @@
                 Categorie
                 </button>
                 <ul id="categorieWrapper" class="dropdown-menu">
-                    <li><a class="dropdown-item font-text" href="/annunci">Tutte le categorie</a></li>
+                    <li><a class="dropdown-item font-text" href="{{route('product.index')}}">Tutte le categorie</a></li>
                 </ul>
                 </div>
             </li>

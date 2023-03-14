@@ -71,7 +71,7 @@ body{
 }
 
 .box {
-  width: 140px;
+  width: auto;
   height: auto;
   float: left;
   transition: .5s linear;
@@ -80,7 +80,7 @@ body{
   overflow: hidden;
   padding: 15px;
   text-align: center;
-  margin: 0 5px;
+  margin: 0;
   background: transparent;
   text-transform: uppercase;
   font-weight: 900;
@@ -128,6 +128,19 @@ body{
   height: 100%;
   transform: translateX(0);
   transition: .3s transform linear, .3s height linear .5s;
+}
+
+.box:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(100%);
 }
 
 .btn-log {
@@ -249,7 +262,7 @@ label {
 
 .img_gif{
   
-  background: radial-gradient(circle, rgba(0, 0, 0, 0) 30%, rgb(0, 0, 0,1) 70%), url(../media/gitMondo.gif);
+  background: radial-gradient(circle, rgba(0, 0, 0, 0) 30%, rgb(0, 0, 0,1) 70%), url(/public/media/gitMondo.gif);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;

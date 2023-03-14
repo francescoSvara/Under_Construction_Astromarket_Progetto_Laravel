@@ -7,6 +7,5 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <!-- SWIPER CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/query.css">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
